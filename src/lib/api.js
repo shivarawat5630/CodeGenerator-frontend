@@ -40,26 +40,26 @@ api.interceptors.response.use(
 
 // Auth API
 export const authAPI = {
-  signup: (data) => api.post('/auth/signup', data),
-  login: (data) => api.post('/auth/login', data),
-  getMe: () => api.get('/auth/me'),
-  forgotPassword: (data) => api.post('/auth/forgot-password', data),
-  resetPassword: (data) => api.post('/auth/reset-password', data),
+  signup: (data) => api.post('api/auth/signup', data),
+  login: (data) => api.post('api/auth/login', data),
+  getMe: () => api.get('api/auth/me'),
+  forgotPassword: (data) => api.post('api/auth/forgot-password', data),
+  resetPassword: (data) => api.post('api/auth/reset-password', data),
 };
 
 // AI Generation API
 export const aiAPI = {
-  generate: (data) => api.post('/generate', data),
+  generate: (data) => api.post('api/generate', data),
 };
 
 // Export API
 export const exportAPI = {
-  download: (id) => api.get(`/export/download/${id}`, { responseType: 'blob' }),
+  download: (id) => api.get(`api/export/download/${id}`, { responseType: 'blob' }),
 };
 
 // Session API
 export const sessionAPI = {
-  checkSession: () => api.get('/session/check'),
+  checkSession: () => api.get('api/session/check'),
 };
 
 export default api;
